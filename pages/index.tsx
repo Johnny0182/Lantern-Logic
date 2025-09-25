@@ -14,8 +14,8 @@ export default function LandingPage() {
           A curated stream of bright ideas, culture riffs, and the tech that&apos;s remaking tomorrow.
           Step inside and stay awhile.
         </p>
-        <Link href="/blog" legacyBehavior>
-          <a className={styles.enterButton}>Enter</a>
+        <Link href="/blog" className={styles.enterButton}>
+          Enter
         </Link>
         <p className={styles.footerNote}>Copyright 2024 Lantern Logic Studio</p>
       </div>

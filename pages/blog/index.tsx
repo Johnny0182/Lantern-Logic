@@ -6,6 +6,7 @@ import { posts } from '@/lib/posts';
 
 const heroPost = posts.find((post) => post.mood === 'hero');
 const featurePosts = posts.filter((post) => post.mood === 'feature');
+const dispatchPosts = posts.filter((post) => post.mood === 'dispatch');
 const quickPosts = posts.filter((post) => post.mood === 'quick');
 
 export default function BlogIndex() {
@@ -22,7 +23,11 @@ export default function BlogIndex() {
         <BlogHeader />
         <main className={styles.main}>
           {heroPost && (
-            <article className={styles.hero} style={{ backgroundImage: heroPost.gradient }}>
+            <article
+              id="spotlight"
+              className={styles.hero}
+              style={{ backgroundImage: `${heroPost.gradient}, url(${heroPost.coverImage})` }}
+            >
               <div className={styles.heroInner}>
                 <span className={styles.pill}>{heroPost.category}</span>
                 <Link href={`/blog/${heroPost.slug}`} className={styles.heroLink}>
@@ -38,44 +43,87 @@ export default function BlogIndex() {
             </article>
           )}
 
-          <section id="features" className={styles.featureGrid}>
-            {featurePosts.map((post) => (
-              <article key={post.slug} className={styles.featureCard} style={{ backgroundImage: post.gradient }}>
-                <div className={styles.featureInner}>
-                  <span className={styles.pill}>{post.category}</span>
-                  <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
-                    <h2>{post.title}</h2>
-                  </Link>
-                  <p>{post.excerpt}</p>
-                  <div className={styles.metaRow}>
-                    <span>{post.publishedAt}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
+          {(featurePosts.length > 0 || dispatchPosts.length > 0) && (
+            <div className={styles.editorialRow}>
+              {featurePosts.length > 0 && (
+                <section id="features" className={styles.featureSection} aria-labelledby="top-stories-heading">
+                  <header className={styles.sectionHeading}>
+                    <h2 id="top-stories-heading">Top stories</h2>
+                    <p>Immersive reporting, speculative design, and climate creativity.</p>
+                  </header>
+                  <div className={styles.featureMosaic}>
+                    {featurePosts.map((post, index) => (
+                      <article
+                        key={post.slug}
+                        className={`${styles.featureCard} ${index === 0 ? styles.featureCardLarge : ''}`}
+                        style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
+                      >
+                        <div className={styles.featureInner}>
+                          <span className={styles.pill}>{post.category}</span>
+                          <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
+                            <h3>{post.title}</h3>
+                          </Link>
+                          <p>{post.excerpt}</p>
+                          <div className={styles.metaRow}>
+                            <span>{post.publishedAt}</span>
+                            <span aria-hidden="true">•</span>
+                            <span>{post.readTime}</span>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
                   </div>
-                </div>
-              </article>
-            ))}
-          </section>
+                </section>
+              )}
 
-          <section id="signals" className={styles.signalPanel}>
-            <header className={styles.sectionHeader}>
-              <h3>Signals</h3>
-              <p>Quick pulses on emerging tech, climate, and culture.</p>
-            </header>
-            <div className={styles.signalList}>
-              {quickPosts.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.signalItem}>
-                  <span className={styles.signalAccent} style={{ background: post.accent }} />
-                  <div>
-                    <p className={styles.signalTitle}>{post.title}</p>
-                    <p className={styles.signalMeta}>
-                      {post.category} • {post.readTime}
-                    </p>
+              {dispatchPosts.length > 0 && (
+                <aside id="dispatches" className={styles.dispatchSection} aria-labelledby="dispatches-heading">
+                  <header className={styles.sectionHeading}>
+                    <h2 id="dispatches-heading">Field dispatches</h2>
+                    <p>Firsthand notes from expeditions, labs, and civic pilots.</p>
+                  </header>
+                  <div className={styles.dispatchList}>
+                    {dispatchPosts.map((post) => (
+                      <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.dispatchItem}>
+                        <span className={styles.dispatchAccent} style={{ background: post.accent }} aria-hidden="true" />
+                        <div>
+                          <p className={styles.dispatchTitle}>{post.title}</p>
+                          <p className={styles.dispatchMeta}>
+                            {post.publishedAt} • {post.readTime}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                </Link>
-              ))}
+                </aside>
+              )}
             </div>
-          </section>
+          )}
+
+          {quickPosts.length > 0 && (
+            <section id="signals" className={styles.signalSection} aria-labelledby="signals-heading">
+              <div className={styles.sectionHeading}>
+                <h2 id="signals-heading">Signal pulses</h2>
+                <p>Snap insights to share in your next standup or salon.</p>
+              </div>
+              <div className={styles.signalRail}>
+                {quickPosts.map((post) => (
+                  <article key={post.slug} className={styles.signalCard}>
+                    <span className={styles.signalAccent} style={{ background: post.accent }} aria-hidden="true" />
+                    <div className={styles.signalBody}>
+                      <Link href={`/blog/${post.slug}`} className={styles.signalTitle}>
+                        {post.title}
+                      </Link>
+                      <p className={styles.signalExcerpt}>{post.excerpt}</p>
+                      <p className={styles.signalMeta}>
+                        {post.category} • {post.readTime}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
         </main>
       </div>
     </>

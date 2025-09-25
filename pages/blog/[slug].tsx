@@ -28,7 +28,10 @@ export default function PostPage() {
       <div className={styles.wrapper}>
         <BlogHeader />
         <article className={styles.article}>
-          <header className={styles.hero} style={{ backgroundImage: post.gradient }}>
+          <header
+            className={styles.hero}
+            style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
+          >
             <div className={styles.heroInner}>
               <span className={styles.pill}>{post.category}</span>
               <h1>{post.title}</h1>

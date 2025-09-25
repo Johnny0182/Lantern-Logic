@@ -11,9 +11,10 @@ export default function BlogHeader() {
         <p className={styles.tagline}>Tech, design, and climate stories for the curious.</p>
       </div>
       <nav className={styles.nav} aria-label="Primary">
-        <Link href="/blog#features">Features</Link>
-        <Link href="/blog#signals">Signals</Link>
+        <Link href="/blog#spotlight">Spotlight</Link>
+        <Link href="/blog#features">Top Stories</Link>
         <Link href="/blog#dispatches">Dispatches</Link>
+        <Link href="/blog#signals">Signals</Link>
       </nav>
     </header>
   );

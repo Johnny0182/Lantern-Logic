@@ -16,14 +16,18 @@
   padding: clamp(2.5rem, 4vw, 3.75rem);
   color: #fff;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(250, 209, 181, 0.25), transparent 60%);
-  mix-blend-mode: screen;
+  background: linear-gradient(160deg, rgba(17, 24, 39, 0.25), rgba(17, 24, 39, 0.75));
+  mix-blend-mode: multiply;
 }
 
 .heroInner {

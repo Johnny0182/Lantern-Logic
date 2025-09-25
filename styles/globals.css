@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
 
 :root {
-  --color-beige: #fad1b5;
-  --color-coral: #f67280;
-  --color-mauve: #c06c84;
-  --color-plum: #6c5b7b;
-  --color-navy: #355c7d;
+  --color-beige: #f5efe3;
+  --color-coral: #e47f7c;
+  --color-mauve: #b980a3;
+  --color-plum: #5e4c8c;
+  --color-navy: #27435c;
   --color-text: #1c1c1c;
   --max-width: 1200px;
 }

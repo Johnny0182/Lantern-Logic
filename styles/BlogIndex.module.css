@@ -1,0 +1,230 @@
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.main {
+  display: grid;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.hero {
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 40px 90px rgba(30, 38, 55, 0.22);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(250, 209, 181, 0.25), transparent 55%);
+  mix-blend-mode: screen;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  display: grid;
+  gap: 1rem;
+}
+
+.heroInner h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.heroInner p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: rgba(250, 209, 181, 0.25);
+  color: #fff;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.metaRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.featureGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.featureCard {
+  border-radius: 24px;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 28px 70px rgba(30, 38, 55, 0.18);
+}
+
+.featureCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 15%, rgba(250, 209, 181, 0.22), transparent 60%);
+  mix-blend-mode: screen;
+}
+
+.featureInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.featureInner h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.featureInner p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.sectionHeader p {
+  margin: 0;
+  max-width: 360px;
+  font-size: 0.95rem;
+  color: rgba(28, 28, 28, 0.7);
+}
+
+.signalPanel {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: inset 0 0 0 1px rgba(53, 92, 125, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.signalList {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.signalItem {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(53, 92, 125, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.signalItem:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.signalItem:hover {
+  transform: translateX(6px);
+}
+
+.signalAccent {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.signalTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+.signalMeta {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(28, 28, 28, 0.65);
+}
+
+@media (max-width: 960px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .main {
+    gap: 2.25rem;
+  }
+
+  .hero {
+    min-height: 360px;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .featureCard {
+    padding: 2rem;
+  }
+
+  .signalPanel {
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

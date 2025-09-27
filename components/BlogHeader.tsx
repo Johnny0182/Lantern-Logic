@@ -6,9 +6,11 @@ export default function BlogHeader() {
     <header className={styles.header}>
       <div className={styles.branding}>
         <Link href="/blog">
-          <span className={styles.logo}>Lantern + Logic 🌐</span>
+          <span className={styles.logo}>Lantern + Logic 🏮</span>
         </Link>
-        <p className={styles.tagline}>Tech intelligence for builders, analysts, and trend spotters.</p>
+        <p className={styles.tagline}>
+          Reporting on emerging technology, systems design, and culture with weekly features, dispatches, and signal briefs.
+        </p>
       </div>
       <nav className={styles.nav} aria-label="Primary">
         <Link href="/blog#spotlight">Spotlight</Link>

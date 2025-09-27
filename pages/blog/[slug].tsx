@@ -22,23 +22,23 @@ export default function PostPage() {
   return (
     <>
       <Head>
-        <title>{post.title} — Lantern + Logic 🌐</title>
+        <title>{post.title} — Lantern + Logic 🏮</title>
         <meta name="description" content={post.excerpt} />
       </Head>
-      <div className={styles.wrapper}>
+      <div className={styles.page}>
         <BlogHeader />
-        <article className={styles.article}>
-          <header
-            className={styles.hero}
-            style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
-          >
-            <div className={styles.heroInner}>
+        <article>
+          <header className={styles.header}>
+            <div className={styles.hero}>
               <span className={styles.pill}>{post.category}</span>
               <h1>{post.title}</h1>
-              <div className={styles.metaRow}>
+              <div className={styles.meta}>
                 <span>{post.publishedAt}</span>
-                <span>•</span>
+                <span aria-hidden="true">•</span>
                 <span>{post.readTime}</span>
+              </div>
+              <div className={styles.cover}>
+                <img src={post.coverImage} alt={post.title} />
               </div>
             </div>
           </header>
@@ -47,11 +47,11 @@ export default function PostPage() {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <footer className={styles.footer}>
+          <div className={styles.footer}>
             <Link href="/blog" className={styles.backLink}>
               ← Back to all stories
             </Link>
-          </footer>
+          </div>
         </article>
       </div>
     </>

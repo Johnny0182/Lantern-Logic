@@ -4,37 +4,44 @@ import styles from '@/styles/Landing.module.css';
 export default function LandingPage() {
   return (
     <main className={styles.page}>
-      <div className={styles.background} aria-hidden>
-        <div className={styles.vignette} />
-        <div className={styles.scanlines} />
-        <div className={styles.glowOrbit} />
-        <div className={styles.glowPulse} />
+      <div className={styles.canvas} aria-hidden>
+        <div className={styles.sunset} />
+        <div className={styles.grid} />
+        <div className={styles.inkStroke} />
+        <div className={styles.photoFrame}>
+          <div className={styles.photoOne} />
+          <div className={styles.photoTwo} />
+        </div>
       </div>
-      <section className={styles.lounge}>
-        <div className={styles.badge}>Waiting Room</div>
+      <section className={styles.card}>
+        <p className={styles.kicker}>Lantern Studio Presents</p>
         <h1 className={styles.title}>
-          Lantern <span>+</span> Logic <em>🌐</em>
+          Lantern <span>+</span> Logic <em>🏮</em>
         </h1>
         <p className={styles.subtitle}>
-          Plug into the neural lounge while the feed calibrates. Ride the ambient loop, then step through to the
-          technologist&apos;s salon.
+          A modern technology review tracking policy, product, and cultural shifts with longform reporting and quick-hit signal
+          pulses. Stay a minute in the lounge, then step into the journal.
         </p>
-        <div className={styles.statusPanel}>
-          <div className={styles.signalLabel}>Signal strength</div>
-          <div className={styles.signalBar}>
-            <span className={styles.signalMeter} />
+        <div className={styles.metaGrid}>
+          <div>
+            <h2>Inside this issue</h2>
+            <ul>
+              <li>Frontier compute and resilient infrastructure</li>
+              <li>Networked climate systems and spatial robotics</li>
+              <li>Intelligence briefings for founders and operators</li>
+            </ul>
           </div>
-          <p className={styles.statusText}>Channel aligned · next gate unlocks in 3... 2... 1...</p>
+          <div>
+            <h2>Updated weekly</h2>
+            <p>Curated by Lantern Studio. Featuring reporting, interviews, and dispatches from global contributors.</p>
+          </div>
         </div>
         <Link href="/blog" className={styles.enterButton}>
-          <span className={styles.enterLabel}>Enter the Circuit</span>
-          <span className={styles.enterIcon} aria-hidden>
-            ⇲
-          </span>
+          Enter the review
         </Link>
         <div className={styles.footer}>
-          <span>Lantern Logic Studio © 2024</span>
-          <span>Curated tech futures &amp; trend dispatches</span>
+          <span>© {new Date().getFullYear()} Lantern + Logic</span>
+          <span>Technology, culture, and strategy at human scale.</span>
         </div>
       </section>
     </main>

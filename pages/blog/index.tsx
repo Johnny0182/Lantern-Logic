@@ -13,10 +13,10 @@ export default function BlogIndex() {
   return (
     <>
       <Head>
-        <title>Lantern + Logic 🌐 — Tech intelligence for curious minds</title>
+        <title>Lantern + Logic 🏮 — Modern technology review</title>
         <meta
           name="description"
-          content="Lantern + Logic surfaces emerging technology stories, dispatches, and signal pulses across AI, climate tech, and the future internet."
+          content="Lantern + Logic publishes features, dispatches, and signal briefs on emerging technology, systems design, and the culture around innovation."
         />
       </Head>
       <div className={styles.wrapper}>

@@ -9,13 +9,13 @@ export default function BlogHeader() {
           <span className={styles.logo}>Lantern + Logic 🏮</span>
         </Link>
         <p className={styles.tagline}>
-          Reporting on emerging technology, systems design, and culture with weekly features, dispatches, and signal briefs.
+          Reporting on emerging technology, systems design, and culture with weekly features, deep dives, and signal briefs.
         </p>
       </div>
       <nav className={styles.nav} aria-label="Primary">
         <Link href="/blog#spotlight">Spotlight</Link>
         <Link href="/blog#features">Top Stories</Link>
-        <Link href="/blog#dispatches">Dispatches</Link>
+        <Link href="/blog#all-stories">All Stories</Link>
         <Link href="/blog#signals">Signals</Link>
       </nav>
     </header>

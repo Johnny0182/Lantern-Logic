@@ -6,7 +6,9 @@ import { posts } from '@/lib/posts';
 
 const heroPost = posts.find((post) => post.mood === 'hero');
 const featurePosts = posts.filter((post) => post.mood === 'feature');
-const dispatchPosts = posts.filter((post) => post.mood === 'dispatch');
+const allStories = posts
+  .filter((post) => post.slug !== heroPost?.slug && post.mood !== 'feature')
+  .slice(0, 10);
 const quickPosts = posts.filter((post) => post.mood === 'quick');
 
 export default function BlogIndex() {
@@ -16,7 +18,7 @@ export default function BlogIndex() {
         <title>Lantern + Logic 🏮 — Modern technology review</title>
         <meta
           name="description"
-          content="Lantern + Logic publishes features, dispatches, and signal briefs on emerging technology, systems design, and the culture around innovation."
+          content="Lantern + Logic publishes features, all-access stories, and signal briefs on emerging technology, systems design, and the culture around innovation."
         />
       </Head>
       <div className={styles.wrapper}>
@@ -43,61 +45,63 @@ export default function BlogIndex() {
             </article>
           )}
 
-          {(featurePosts.length > 0 || dispatchPosts.length > 0) && (
-            <div className={styles.editorialRow}>
-              {featurePosts.length > 0 && (
-                <section id="features" className={styles.featureSection} aria-labelledby="top-stories-heading">
-                  <header className={styles.sectionHeading}>
-                    <h2 id="top-stories-heading">Top stories</h2>
-                    <p>Deep dives into frontier labs, cybersecurity shifts, and the builders changing how we live online.</p>
-                  </header>
-                  <div className={styles.featureMosaic}>
-                    {featurePosts.map((post, index) => (
-                      <article
-                        key={post.slug}
-                        className={`${styles.featureCard} ${index === 0 ? styles.featureCardLarge : ''}`}
-                        style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
-                      >
-                        <div className={styles.featureInner}>
-                          <span className={styles.pill}>{post.category}</span>
-                          <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
-                            <h3>{post.title}</h3>
-                          </Link>
-                          <p>{post.excerpt}</p>
-                          <div className={styles.metaRow}>
-                            <span>{post.publishedAt}</span>
-                            <span aria-hidden="true">•</span>
-                            <span>{post.readTime}</span>
-                          </div>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {dispatchPosts.length > 0 && (
-                <aside id="dispatches" className={styles.dispatchSection} aria-labelledby="dispatches-heading">
-                  <header className={styles.sectionHeading}>
-                    <h2 id="dispatches-heading">Field dispatches</h2>
-                    <p>On-the-ground notes from robotics testbeds, climate infrastructure pilots, and global policy rooms.</p>
-                  </header>
-                  <div className={styles.dispatchList}>
-                    {dispatchPosts.map((post) => (
-                      <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.dispatchItem}>
-                        <span className={styles.dispatchAccent} style={{ background: post.accent }} aria-hidden="true" />
-                        <div>
-                          <p className={styles.dispatchTitle}>{post.title}</p>
-                          <p className={styles.dispatchMeta}>
-                            {post.publishedAt} • {post.readTime}
-                          </p>
-                        </div>
+          {featurePosts.length > 0 && (
+            <section id="features" className={styles.featureSection} aria-labelledby="top-stories-heading">
+              <header className={styles.sectionHeading}>
+                <h2 id="top-stories-heading">Top stories</h2>
+                <p>Deep dives into frontier labs, cybersecurity shifts, and the builders changing how we live online.</p>
+              </header>
+              <div className={styles.featureMosaic}>
+                {featurePosts.map((post, index) => (
+                  <article
+                    key={post.slug}
+                    className={`${styles.featureCard} ${index === 0 ? styles.featureCardLarge : ''}`}
+                    style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
+                  >
+                    <div className={styles.featureInner}>
+                      <span className={styles.pill}>{post.category}</span>
+                      <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
+                        <h3>{post.title}</h3>
                       </Link>
-                    ))}
-                  </div>
-                </aside>
-              )}
-            </div>
+                      <p>{post.excerpt}</p>
+                      <div className={styles.metaRow}>
+                        <span>{post.publishedAt}</span>
+                        <span aria-hidden="true">•</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {allStories.length > 0 && (
+            <section id="all-stories" className={styles.allStoriesSection} aria-labelledby="all-stories-heading">
+              <header className={styles.sectionHeading}>
+                <h2 id="all-stories-heading">All stories</h2>
+                <p>Ten must-read reports from the field, spanning moonshot prototypes to policy experiments.</p>
+              </header>
+              <div className={styles.allStoriesGrid}>
+                {allStories.map((post) => (
+                  <article key={post.slug} className={styles.allStoryCard}>
+                    <div className={styles.allStoryMedia} style={{ backgroundImage: `url(${post.coverImage})` }} />
+                    <div className={styles.allStoryBody}>
+                      <span className={styles.pill}>{post.category}</span>
+                      <Link href={`/blog/${post.slug}`} className={styles.allStoryLink}>
+                        <h3>{post.title}</h3>
+                      </Link>
+                      <p>{post.excerpt}</p>
+                    </div>
+                    <div className={`${styles.metaRow} ${styles.allStoryMeta}`}>
+                      <span>{post.publishedAt}</span>
+                      <span aria-hidden="true">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
           )}
 
           {quickPosts.length > 0 && (

@@ -229,6 +229,42 @@ export const posts: Post[] = [
     gradient: 'linear-gradient(150deg, rgba(30, 28, 24, 0.62), rgba(184, 138, 74, 0.32))',
     coverImage: 'https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1400&q=80',
   },
+  {
+    slug: 'fusion-lab-notebook',
+    title: 'Fusion Lab Notebooks Go Real-Time with Shared Telemetry',
+    excerpt:
+      'Tokamak teams are collaborating in synced lab notebooks that stream reactor telemetry, simulation deltas, and design riffs.',
+    content: [
+      'The race to net-positive fusion is spawning an open collaboration layer. Instead of emailing PDFs, labs are wiring live reactor telemetry into shared notebooks that update every control loop.',
+      'Engineers annotate plasma instabilities, upload revised coil geometries, and invite policy liaisons into the thread so permitting conversations stay on pace with experiments.',
+      'We explore the privacy guardrails, the interoperability APIs, and the startups helping government labs tap into the collaborative fabric without leaking trade secrets.',
+    ],
+    category: 'Energy',
+    readTime: '6 min read',
+    publishedAt: 'Last week',
+    mood: 'quick',
+    accent: '#3f6d70',
+    gradient: 'linear-gradient(150deg, rgba(26, 32, 34, 0.62), rgba(63, 109, 112, 0.32))',
+    coverImage: 'https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1400&q=80',
+  },
+  {
+    slug: 'subsea-edge-cooling',
+    title: 'Subsea Edge Cooling Pods Anchor AI at the Ocean Floor',
+    excerpt:
+      'Operators are docking immersion-cooled AI rigs to tidal turbines, slashing latency for coastal robotics and sensor swarms.',
+    content: [
+      'Undersea cables already hug the shoreline—now AI teams are following. New subsea pods suspend GPU racks in mineral oil baths that shed heat directly into deep currents.',
+      'Robotic divers swap blades and filters while autonomous buoys beam health data back to coastal command centers.',
+      'We trace the materials science, the corrosion mitigation stack, and how marine regulators are writing the first permits for ocean-based compute.',
+    ],
+    category: 'Infrastructure',
+    readTime: '5 min read',
+    publishedAt: 'Last week',
+    mood: 'quick',
+    accent: '#d6a656',
+    gradient: 'linear-gradient(150deg, rgba(28, 32, 26, 0.6), rgba(214, 166, 86, 0.3))',
+    coverImage: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80',
+  },
 ];
 
 export function getPost(slug: string) {

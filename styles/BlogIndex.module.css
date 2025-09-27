@@ -76,13 +76,6 @@
   color: rgba(253, 248, 239, 0.78);
 }
 
-.editorialRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
-  gap: clamp(2rem, 4vw, 3rem);
-  align-items: start;
-}
-
 .sectionHeading {
   display: grid;
   gap: 0.4rem;
@@ -165,46 +158,60 @@
   color: inherit;
 }
 
-.dispatchSection {
+.allStoriesSection {
+  display: grid;
+  gap: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.allStoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.allStoryCard {
+  display: grid;
+  grid-template-rows: 180px auto auto;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(150deg, rgba(255, 253, 248, 0.94), rgba(245, 237, 226, 0.9));
   border: 1px solid var(--color-border);
-  border-radius: 1.8rem;
-  padding: clamp(1.8rem, 3vw, 2.3rem);
-  background: linear-gradient(145deg, rgba(255, 253, 248, 0.9), rgba(245, 237, 226, 0.95));
-  box-shadow: 0 20px 48px rgba(31, 27, 23, 0.16);
-  display: grid;
-  gap: 1.4rem;
+  box-shadow: 0 24px 60px rgba(31, 27, 23, 0.14);
+  gap: 1.1rem;
 }
 
-.dispatchList {
-  display: grid;
-  gap: 1rem;
-}
-
-.dispatchItem {
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 1rem;
-  align-items: flex-start;
-  color: var(--color-ink);
-}
-
-.dispatchAccent {
-  width: 16px;
+.allStoryMedia {
+  width: 100%;
   height: 100%;
-  border-radius: 999px;
-  background: var(--color-highlight);
+  border-radius: 1.1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
-.dispatchTitle {
+.allStoryBody {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.allStoryLink {
+  color: inherit;
+}
+
+.allStoryBody h3 {
   margin: 0;
-  font-weight: 600;
-  line-height: 1.4;
+  font-size: 1.35rem;
+  line-height: 1.35;
 }
 
-.dispatchMeta {
-  margin: 0.3rem 0 0;
-  font-size: 0.85rem;
+.allStoryBody p {
+  margin: 0;
   color: var(--color-ink-soft);
+  line-height: 1.6;
+}
+
+.allStoryMeta {
+  color: rgba(31, 27, 23, 0.6);
 }
 
 .signalSection {
@@ -259,12 +266,6 @@
   color: rgba(31, 27, 23, 0.55);
 }
 
-@media (max-width: 960px) {
-  .editorialRow {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 720px) {
   .hero {
     min-height: 360px;
@@ -279,6 +280,10 @@
     grid-column: span 1;
     min-height: 260px;
   }
+
+  .allStoryCard {
+    grid-template-rows: 200px auto auto;
+  }
 }
 
 @media (max-width: 520px) {
@@ -288,5 +293,10 @@
 
   .signalRail {
     grid-template-columns: 1fr;
+  }
+
+  .allStoryCard {
+    padding: 1.3rem;
+    grid-template-rows: 180px auto auto;
   }
 }

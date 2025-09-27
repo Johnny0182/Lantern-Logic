@@ -22,7 +22,7 @@ export default function PostPage() {
   return (
     <>
       <Head>
-        <title>{post.title} — Lantern + Logic 🏮</title>
+        <title>{post.title} — Lantern + Logic 🌐</title>
         <meta name="description" content={post.excerpt} />
       </Head>
       <div className={styles.wrapper}>

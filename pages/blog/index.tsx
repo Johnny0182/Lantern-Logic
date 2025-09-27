@@ -13,10 +13,10 @@ export default function BlogIndex() {
   return (
     <>
       <Head>
-        <title>Lantern + Logic 🏮 — Future-facing essays & signals</title>
+        <title>Lantern + Logic 🌐 — Tech intelligence for curious minds</title>
         <meta
           name="description"
-          content="Lantern Logic Journal blends design culture, climate tech, and speculative futures in a modern magazine layout inspired by MIT Technology Review."
+          content="Lantern + Logic surfaces emerging technology stories, dispatches, and signal pulses across AI, climate tech, and the future internet."
         />
       </Head>
       <div className={styles.wrapper}>
@@ -49,7 +49,7 @@ export default function BlogIndex() {
                 <section id="features" className={styles.featureSection} aria-labelledby="top-stories-heading">
                   <header className={styles.sectionHeading}>
                     <h2 id="top-stories-heading">Top stories</h2>
-                    <p>Immersive reporting, speculative design, and climate creativity.</p>
+                    <p>Deep dives into frontier labs, cybersecurity shifts, and the builders changing how we live online.</p>
                   </header>
                   <div className={styles.featureMosaic}>
                     {featurePosts.map((post, index) => (
@@ -80,7 +80,7 @@ export default function BlogIndex() {
                 <aside id="dispatches" className={styles.dispatchSection} aria-labelledby="dispatches-heading">
                   <header className={styles.sectionHeading}>
                     <h2 id="dispatches-heading">Field dispatches</h2>
-                    <p>Firsthand notes from expeditions, labs, and civic pilots.</p>
+                    <p>On-the-ground notes from robotics testbeds, climate infrastructure pilots, and global policy rooms.</p>
                   </header>
                   <div className={styles.dispatchList}>
                     {dispatchPosts.map((post) => (
@@ -104,7 +104,7 @@ export default function BlogIndex() {
             <section id="signals" className={styles.signalSection} aria-labelledby="signals-heading">
               <div className={styles.sectionHeading}>
                 <h2 id="signals-heading">Signal pulses</h2>
-                <p>Snap insights to share in your next standup or salon.</p>
+                <p>Snackable intel on products, funding moves, and cultural waves shaping the next release cycle.</p>
               </div>
               <div className={styles.signalRail}>
                 {quickPosts.map((post) => (

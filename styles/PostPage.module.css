@@ -1,20 +1,21 @@
 .wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 0 1.5rem 4.5rem;
 }
 
 .article {
   margin-top: 2rem;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.85), rgba(247, 234, 217, 0.9));
-  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(17, 24, 33, 0.92), rgba(9, 13, 18, 0.95));
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(90, 62, 200, 0.16);
+  box-shadow: 0 45px 120px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(159, 242, 95, 0.12);
 }
 
 .hero {
   padding: clamp(2.5rem, 4vw, 3.75rem);
-  color: #fff9f3;
+  color: #effff6;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -26,8 +27,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(150deg, rgba(47, 38, 90, 0.25), rgba(47, 38, 90, 0.65));
-  mix-blend-mode: multiply;
+  background: linear-gradient(150deg, rgba(5, 5, 7, 0.15), rgba(5, 5, 7, 0.78)),
+    radial-gradient(circle at 15% 30%, rgba(62, 246, 192, 0.32), transparent 60%);
+  mix-blend-mode: overlay;
 }
 
 .heroInner {
@@ -40,20 +42,20 @@
 
 .heroInner h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.2rem, 4.8vw, 3.5rem);
   line-height: 1.05;
 }
 
 .pill {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding: 0.4rem 1rem;
+  letter-spacing: 0.28em;
+  padding: 0.42rem 1.05rem;
   border-radius: 999px;
-  background: rgba(255, 181, 125, 0.3);
-  color: inherit;
-  font-weight: 600;
+  background: rgba(17, 24, 33, 0.65);
+  color: var(--color-emerald-soft);
+  border: 1px solid rgba(159, 242, 95, 0.45);
   width: fit-content;
 }
 
@@ -62,12 +64,13 @@
   gap: 0.5rem;
   align-items: center;
   font-size: 0.9rem;
+  color: rgba(235, 255, 243, 0.75);
 }
 
 .body {
-  padding: clamp(2.5rem, 3.5vw, 3.5rem);
+  padding: clamp(2.6rem, 3.5vw, 3.6rem);
   display: grid;
-  gap: 1.5rem;
+  gap: 1.6rem;
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--color-text);
@@ -75,25 +78,26 @@
 
 .body p {
   margin: 0;
+  color: var(--color-text-muted);
 }
 
 .footer {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.6rem 2.6rem;
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
   font-size: 0.75rem;
-  color: var(--color-coral);
+  color: var(--color-emerald);
 }
 
 .backLink:hover {
-  color: var(--color-mauve);
+  color: var(--color-mint);
 }
 
 .missing {
@@ -101,15 +105,15 @@
   display: grid;
   place-items: center;
   font-size: 1.1rem;
-  color: var(--color-ink-soft);
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 640px) {
   .wrapper {
-    padding: 0 1.25rem 3rem;
+    padding: 0 1.25rem 3.5rem;
   }
 
   .footer {
-    padding: 0 1.75rem 2rem;
+    padding: 0 1.8rem 2.2rem;
   }
 }

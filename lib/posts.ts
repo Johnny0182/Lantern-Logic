@@ -14,203 +14,221 @@ export interface Post {
 
 export const posts: Post[] = [
   {
-    slug: 'synthetic-sunrises',
-    title: 'Synthetic Sunrises: Designing the Mood of Smart Cities',
+    slug: 'hypergrid-ai-clouds',
+    title: 'Hypergrid AI Clouds Are Rewiring the Energy Internet',
     excerpt:
-      'Urban planners are programming artificial dawns to keep megacities in sync. Can code make mornings feel more human?',
+      'Modular data centers are docking with renewable microgrids to spin up planet-scale AI without melting the grid.',
     content: [
-      'As global cities rise vertically, natural light becomes a premium amenity. Designers are responding with synthetic skylines — programmable facades that bloom into sunrise gradients before commuters pour into the streets.',
-      'The Lantern Logic team embedded with Seoul’s newest “always dawn” district to understand how circadian lighting is woven into transit, wellness, and retail moments. Residents receive a personalized color temperature blend based on sleep history, while public plazas pivot to cooler palettes once afternoon productivity should spike.',
-      'Yet the soft glow hides hard questions: Who controls the dimmer switch of a city? Civic technologists argue that these systems must be transparent and modular to avoid a new class divide between biologically-aligned neighborhoods and everyone else.'
+      'The hyperscale playbook is getting rewritten in real time. Instead of dropping another megastructure in the desert, AI teams are orchestrating fleets of modular compute pods that clip into community-owned microgrids.',
+      'Each pod negotiates for clean power in milliseconds, balancing inference surges with wind, tidal, and battery capacity. The result is a responsive mesh that can flex up for training runs and drop down to baseline when only inference is needed.',
+      'Lantern + Logic toured three pilots across Reykjavík, Singapore, and Oaxaca. We break down the orchestration layer, the open telemetry standard that lets civic operators audit drawdowns, and the new jobs emerging around grid choreography.',
     ],
-    category: 'Future Cities',
-    readTime: '7 min read',
+    category: 'Infrastructure',
+    readTime: '8 min read',
     publishedAt: '2 hours ago',
     mood: 'hero',
-    accent: '#ff6f91',
-    gradient: 'linear-gradient(135deg, rgba(255, 111, 145, 0.92), rgba(255, 181, 125, 0.7))',
-    coverImage: 'https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1600&q=80'
+    accent: '#9ff25f',
+    gradient: 'linear-gradient(135deg, rgba(14, 26, 36, 0.7), rgba(159, 242, 95, 0.35))',
+    coverImage: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80',
   },
   {
-    slug: 'wiki-rewilding',
-    title: 'Rewilding Wikipedia with Generative Stewardship',
+    slug: 'post-quantum-red-team',
+    title: 'Inside the Post-Quantum Red Team Keeping Wallets Safe',
     excerpt:
-      'Volunteer editors are enlisting AI partners to rehabilitate neglected knowledge ecosystems without erasing human nuance.',
+      'Crypto custodians, banks, and civic networks are stress-testing every handshake before quantum machines arrive.',
     content: [
-      'Hyper-niche communities are turning Wikipedia stubs into lush, multimedia gardens. Instead of letting bots run wild, curators are pairing generative systems with review circles to preserve tone, citations, and lived context.',
-      'The hybrid workflow mirrors ecological stewardship: algorithms propose seedlings of content, while humans prune, translate, and prioritize based on cultural sensitivity. The result is an encyclopedic canopy that resists homogeneity.',
-      'Our playbook outlines how to evaluate synthetic contributions, mentor new editors, and structure transparency reports that keep trust intact.'
+      'The quantum threat to encryption isn’t theoretical anymore. A coalition of security labs is running coordinated red-team exercises that simulate Shor-powered adversaries against today’s wallets, payments, and identity rails.',
+      'We embedded with the task force’s “zero-day orchestra,” a rotating crew of cryptographers and creative hackers who blend adversarial ML with human ingenuity to smash outdated assumptions.',
+      'This feature maps out the migration plan, recommended hardware upgrades, and the open-source suite you can deploy today to quantum-harden your infrastructure.',
     ],
-    category: 'Knowledge Systems',
-    readTime: '5 min read',
+    category: 'Cybersecurity',
+    readTime: '7 min read',
     publishedAt: '4 hours ago',
     mood: 'feature',
-    accent: '#a88bff',
-    gradient: 'linear-gradient(140deg, rgba(168, 139, 255, 0.85), rgba(90, 62, 200, 0.6))',
-    coverImage: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=80'
+    accent: '#3ef6c0',
+    gradient: 'linear-gradient(140deg, rgba(8, 18, 26, 0.76), rgba(62, 246, 192, 0.42))',
+    coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80',
   },
   {
-    slug: 'climate-soundtracks',
-    title: 'Climate Soundtracks for the Circular Economy',
+    slug: 'synthetic-media-cooperatives',
+    title: 'Synthetic Media Cooperatives Are Monetizing the Meme Graph',
     excerpt:
-      'Composers and manufacturers are syncing audio identities to recycled materials to reveal hidden loops in supply chains.',
+      'Community-owned model studios let creators license voice, likeness, and meme DNA without surrendering rights.',
     content: [
-      'Circular economy brands have always needed better storytelling. By publishing sonic signatures tied to material provenance, designers are helping consumers sense the loops embedded in everyday objects.',
-      'We toured three factories that choreograph sound cues with every reclaimed batch. The experience feels like a living score where each instrument is a diverted waste stream.',
-      'The approach could scale beyond marketing: regulators are experimenting with acoustic disclosures that alert communities when pollution thresholds near critical limits.'
-    ],
-    category: 'Climate & Culture',
-    readTime: '6 min read',
-    publishedAt: 'Yesterday',
-    mood: 'feature',
-    accent: '#ffb37b',
-    gradient: 'linear-gradient(145deg, rgba(255, 179, 123, 0.85), rgba(255, 111, 145, 0.65))',
-    coverImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80'
-  },
-  {
-    slug: 'immersive-transit-lounges',
-    title: 'Immersive Transit Lounges Reset the Commuter Ritual',
-    excerpt:
-      'Airports are rehabbing empty concourses into restorative galleries where biometrics melt into ambient art.',
-    content: [
-      'The post-pandemic travel surge exposed how utilitarian concourses actually drain productivity. A new class of “calm tech” transit lounges swaps departure boards for reactive murals that stream live transit data only when you need it.',
-      'Lantern Logic partnered with Nordic airport designers to prototype a modular lounge kit. Each bay pairs scent, light, and adaptive audio to match chronotypes. Travelers opt-in by tapping a tactile tile — no apps, no friction.',
-      'Results from the pilot show a 40% uptick in passenger satisfaction scores. We break down the materials library and data ethics guardrails that keep the system human-first.'
-    ],
-    category: 'Mobility Futures',
-    readTime: '6 min read',
-    publishedAt: 'Today',
-    mood: 'feature',
-    accent: '#355c7d',
-    gradient: 'linear-gradient(145deg, rgba(53, 92, 125, 0.85), rgba(250, 209, 181, 0.78))',
-    coverImage: 'https://images.unsplash.com/photo-1521721137577-22ad38b3ec0f?auto=format&fit=crop&w=1400&q=80'
-  },
-  {
-    slug: 'tidal-grid-briefing',
-    title: 'Dispatch: Inside the North Sea’s Tidal Grid Accelerator',
-    excerpt:
-      'Our field team documents how modular turbines, fishing cooperatives, and indigenous stewards are co-designing Europe’s cleanest megaproject.',
-    content: [
-      'The Tidal Grid Accelerator is part lab, part living reef. Over the past six months we have embedded with marine engineers and coastal cooperatives aligning on a single mandate: center biodiversity while scaling renewable output.',
-      'This dispatch shares sketches from the offshore control rooms, interviews with the Skagerrak fisheries who steward the waters, and a primer on how the accelerator’s open IP clauses could reset the politics of infrastructure.',
-      'We close with a toolkit for civic teams hoping to adapt the model to other archipelagos without repeating colonial extraction patterns.'
-    ],
-    category: 'Field Dispatch',
-    readTime: '12 min read',
-    publishedAt: 'Today',
-    mood: 'dispatch',
-    accent: '#ff8da1',
-    gradient: 'linear-gradient(150deg, rgba(255, 141, 161, 0.85), rgba(255, 179, 123, 0.65))',
-    coverImage: 'https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    slug: 'microstudio-renaissance',
-    title: 'The Microstudio Renaissance Is Fueling Solo Inventors',
-    excerpt:
-      'Compact lab lofts are equipping independent builders with cinematic tools and biotech rigs in one membership.',
-    content: [
-      'Membership microstudios used to be glorified co-working pods. The new wave blends fabrication bays, podcast caves, and wet labs for $300 a month.',
-      'We interviewed six founders whose ventures went from sketch to prototype without leaving a single block. The key unlock? Shared compliance teams who bake regulatory hygiene into every workstation.',
-      'For cities courting builders, microstudios are becoming civic infrastructure — a place to pilot policies in weeks instead of years.'
+      'Instead of handing their likeness to a single platform, creators are spinning up co-ops that run high-fidelity diffusion and voice models on shared infrastructure. Smart contracts govern how every derivative clip is licensed and paid out.',
+      'The cooperatives are onboarding lawyers, archivists, and cultural historians to ensure every prompt inherits the right lineage. It’s a mash-up of talent agency and credit union, tuned for the synthetic era.',
+      'We highlight the governance templates, federated moderation stack, and the revenue analytics dashboards that members use to stay transparent.',
     ],
     category: 'Creator Economy',
-    readTime: '4 min read',
+    readTime: '6 min read',
+    publishedAt: 'Today',
+    mood: 'feature',
+    accent: '#64f0ff',
+    gradient: 'linear-gradient(150deg, rgba(12, 20, 28, 0.72), rgba(100, 240, 255, 0.4))',
+    coverImage: 'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1500&q=80',
+  },
+  {
+    slug: 'biofabrication-habitats',
+    title: 'Biofabrication Habitats Grow Housing on Demand',
+    excerpt:
+      'Architects and mycelium engineers are co-designing living shells that self-heal, sequester carbon, and power themselves.',
+    content: [
+      'Startup consortia are mixing bioprinted lattices with engineered mycelium to “grow” homes that strengthen over time. The units are seeded in orbital warehouses, then hydrated on-site so walls sprout in days instead of months.',
+      'Embedded micro-inverters capture energy from the metabolic heat and light the interior. The habitats can be composted, regrown, or patched with another growth cycle.',
+      'We analyze the supply chain, regulatory path, and the circular financing instrument that lets cities lease growth capacity instead of buying static inventory.',
+    ],
+    category: 'Climate Tech',
+    readTime: '9 min read',
     publishedAt: 'Yesterday',
-    mood: 'quick',
-    accent: '#5a3ec8',
-    gradient: 'linear-gradient(145deg, rgba(90, 62, 200, 0.78), rgba(168, 139, 255, 0.6))',
-    coverImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80'
+    mood: 'feature',
+    accent: '#9ff25f',
+    gradient: 'linear-gradient(145deg, rgba(10, 22, 16, 0.7), rgba(159, 242, 95, 0.38))',
+    coverImage: 'https://images.unsplash.com/photo-1505842465776-3acb7d92c7f0?auto=format&fit=crop&w=1500&q=80',
   },
   {
-    slug: 'intimate-ai-interfaces',
-    title: 'Intimate AI Interfaces for Boutique Healthcare',
+    slug: 'martian-ops-console',
+    title: 'Dispatch: Martian Ops Console Runs the Next Mission Control',
     excerpt:
-      'Concierge clinics are building bedside agents that whisper insights without hijacking human rapport.',
+      'Human factors teams in Houston and Bengaluru are prototyping a collaborative mission console for Mars supply runs.',
     content: [
-      'Healthcare startups are finally ditching sterile dashboards. Boutique clinics now favor ambient projection, haptics, and biometrics woven into warm, tactile experiences.',
-      'Lantern Logic designers co-created a bedside agent that surfaces metrics as woven light patterns along the headboard. Patients reported a 30% drop in tech anxiety.',
-      'We share prototyping tips for maintaining consent, grounding, and the human-to-human attention that matters most.'
+      'The Martian Ops Console merges holo-maps, swarm robotics telemetry, and time-shifted crew logs into a single situational awareness hub.',
+      'We shadowed the human factors crew translating astronaut feedback into interface upgrades, from breathable typography to predictive handoff scripts that keep teams aligned across 20-minute delays.',
+      'The dispatch unpacks the open API spec, the VR rehearsal rooms, and how they are hardening the system against adversarial spoofing.',
     ],
-    category: 'Human-Centered AI',
-    readTime: '8 min read',
-    publishedAt: '2 days ago',
-    mood: 'quick',
-    accent: '#ff6f91',
-    gradient: 'linear-gradient(145deg, rgba(255, 181, 125, 0.85), rgba(255, 111, 145, 0.7))',
-    coverImage: 'https://images.unsplash.com/photo-1601934823311-d1599c5ef8c6?auto=format&fit=crop&w=1200&q=80'
+    category: 'Space Systems',
+    readTime: '11 min read',
+    publishedAt: 'Today',
+    mood: 'dispatch',
+    accent: '#3ef6c0',
+    gradient: 'linear-gradient(150deg, rgba(7, 14, 22, 0.75), rgba(62, 246, 192, 0.45))',
+    coverImage: 'https://images.unsplash.com/photo-1581091870634-81f8a1f1d94b?auto=format&fit=crop&w=1400&q=80',
   },
   {
-    slug: 'kinetic-campus-labs',
-    title: 'Dispatch: Kinetic Campus Labs Rewrite Research Workflows',
+    slug: 'robotic-surgery-field-clinics',
+    title: 'Dispatch: Robotic Surgery Pods Roll Into Climate Field Clinics',
     excerpt:
-      'A tour of mixed-reality studios at three universities experimenting with kinetic walls, responsive light, and cohort-based protocols.',
+      'Mobile trauma units are pairing edge AI with remote surgeons to stabilize patients where hospitals are hours away.',
     content: [
-      'Kinetic labs blur the line between architecture and instrumentation. We spent two weeks moving with cohort teams at three universities who choreograph their research across rooms that literally reshape themselves every hour.',
-      'The rooms remember each cohort’s sequence. When environmental scientists roll in, the wall LEDs dim to circadian-safe amber. When performance technologists take over, the same walls ripple to become motion-capture canvases.',
-      'This dispatch dissects how facilities managers budget for modular hardware, the governance structures that determine access, and why the students call it “studying inside a living organism.”'
+      'As climate volatility pushes more communities off-grid, NGOs are deploying robotic surgery pods built on ruggedized trailers. Each pod contains sterilization, imaging, and haptic telepresence gear that specialists can control over low-bandwidth satellite links.',
+      'We follow a convoy in Senegal as they coordinate with local nurses, calibrate latency buffers, and sync with drones that deliver blood and pharmaceuticals.',
+      'The dispatch covers the mesh networking stack, data governance protocols, and how local clinicians are being trained to maintain the fleets.',
     ],
-    category: 'Field Dispatch',
+    category: 'Health Tech',
     readTime: '10 min read',
+    publishedAt: 'Yesterday',
+    mood: 'dispatch',
+    accent: '#9ff25f',
+    gradient: 'linear-gradient(150deg, rgba(10, 20, 18, 0.75), rgba(159, 242, 95, 0.45))',
+    coverImage: 'https://images.unsplash.com/photo-1580281657521-6dd25fa5dd5e?auto=format&fit=crop&w=1400&q=80',
+  },
+  {
+    slug: 'policy-lab-sandboxes',
+    title: 'Dispatch: Policy Lab Sandboxes Stress-Test AI Legislation',
+    excerpt:
+      'Regulators and founders are co-simulating algorithmic harms inside multiplayer sandboxes before rules are signed.',
+    content: [
+      'Legislators tired of reactive policy are building digital twins of proposed AI laws. Teams plug in synthetic citizens, adversarial agents, and real product telemetry to see where loopholes live before a rule hits parliament.',
+      'The sandboxes run like esports arenas—policy authors sit next to founders, ethicists, and civic hackers as they iterate language live.',
+      'We explore the open datasets fueling the sims, the dispute resolution rituals, and the template MoUs helping other governments join in.',
+    ],
+    category: 'Policy',
+    readTime: '12 min read',
     publishedAt: '2 days ago',
     mood: 'dispatch',
-    accent: '#5a3ec8',
-    gradient: 'linear-gradient(145deg, rgba(90, 62, 200, 0.82), rgba(168, 139, 255, 0.6))',
-    coverImage: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=80'
+    accent: '#64f0ff',
+    gradient: 'linear-gradient(150deg, rgba(8, 16, 24, 0.76), rgba(100, 240, 255, 0.4))',
+    coverImage: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1400&q=80',
   },
   {
-    slug: 'astro-archive',
-    title: 'Archiving the Night Sky for the Post-Satellite Era',
+    slug: 'quantum-firmware-updates',
+    title: 'Quantum Firmware Updates Go Over-the-Air',
     excerpt:
-      'Astronomers are racing to capture dark-sky panoramas before orbit turns into a permanent light show.',
+      'Cryo racks are learning to patch themselves thanks to superconducting control stacks that compress updates into kilobytes.',
     content: [
-      'With megaconstellations multiplying, dark-sky preserves are accelerating efforts to capture pristine celestial baselines.',
-      'An international coalition is building an encrypted, community-owned archive of night-sky footage to inform future spectrum policy.',
-      'The archive doubles as an immersive art platform, letting people experience ancient starlight through volumetric domes.'
+      'Maintaining a quantum computer used to require a white-glove visit from specialists. A wave of startups is shipping OTA firmware that piggybacks on cryogenic control stacks, letting operators deploy calibrations overnight.',
+      'The approach hinges on aggressive compression, synthetic telemetry for verification, and a rollback protocol that can recover from decoherence spikes.',
+      'Here’s how to prepare your own lab, from shielding upgrades to the observability dashboard that makes quantum uptime feel like cloud ops.',
     ],
-    category: 'Space Futures',
-    readTime: '9 min read',
-    publishedAt: 'Last week',
+    category: 'Quantum',
+    readTime: '4 min read',
+    publishedAt: 'Today',
     mood: 'quick',
-    accent: '#a88bff',
-    gradient: 'linear-gradient(150deg, rgba(168, 139, 255, 0.85), rgba(90, 62, 200, 0.55))',
-    coverImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80'
+    accent: '#3ef6c0',
+    gradient: 'linear-gradient(145deg, rgba(10, 22, 30, 0.72), rgba(62, 246, 192, 0.42))',
+    coverImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80',
   },
   {
-    slug: 'luminous-wildcards',
-    title: 'Luminous Wildcards Illuminate Climate Scenarios',
+    slug: 'semiconductor-talent-graph',
+    title: 'The Semiconductor Talent Graph Is Going Open Source',
     excerpt:
-      'Scenario planners are training projection orbs to glow with probabilities, giving city councils a tactile way to debate futures.',
+      'Universities and fabs are open-sourcing skills data so talent can redeploy faster when new fabs spin up.',
     content: [
-      'A consortium of civic futurists has introduced Luminous Wildcards — translucent orbs that encode data about climate tipping points. When a scenario becomes more likely, the orb brightens and shifts hue.',
-      'The system lives in public briefing rooms where residents can literally grasp the stakes. It pairs with open dashboards so constituents can audit assumptions in real time.',
-      'Policy teams say the tactile layer keeps debate grounded. We outline a starter kit for building your own luminous library with off-the-shelf LEDs and open climate models.'
+      'Supply chain shocks forced chipmakers to collaborate in ways nobody expected. The latest: an open skills graph where fabs, universities, and unions publish anonymized data on training hours, certifications, and job placements.',
+      'With federated identity, workers can prove competency without exposing personal info. Workforce boards use the graph to route people to scholarships, apprenticeships, and relocation stipends.',
+      'We cover the technical architecture, the incentives for sharing, and the emerging analytics startups building insights on top.',
     ],
-    category: 'Civic Tech',
+    category: 'Industry',
+    readTime: '5 min read',
+    publishedAt: 'Yesterday',
+    mood: 'quick',
+    accent: '#9ff25f',
+    gradient: 'linear-gradient(150deg, rgba(12, 22, 16, 0.7), rgba(159, 242, 95, 0.38))',
+    coverImage: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80',
+  },
+  {
+    slug: 'ai-safety-ux-toolkit',
+    title: 'Designers Drop an AI Safety UX Toolkit',
+    excerpt:
+      'Product teams are swapping modal fatigue for progressive disclosure, consent loops, and contextual guardrails.',
+    content: [
+      'AI safety doesn’t have to feel like paperwork. A cross-company working group just released an open toolkit of UI patterns, copy decks, and testing rituals that make disclosures intuitive.',
+      'The toolkit includes responsive consent loops, friction points that can expand or contract based on risk, and prototyping files for Figma and WebXR.',
+      'We dig into the human research that informed the toolkit and how teams are measuring trust lift after rolling it out.',
+    ],
+    category: 'Product',
     readTime: '3 min read',
-    publishedAt: 'Last week',
+    publishedAt: '2 days ago',
     mood: 'quick',
-    accent: '#ffb37b',
-    gradient: 'linear-gradient(150deg, rgba(255, 179, 123, 0.82), rgba(255, 111, 145, 0.65))',
-    coverImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80'
+    accent: '#64f0ff',
+    gradient: 'linear-gradient(150deg, rgba(10, 18, 26, 0.72), rgba(100, 240, 255, 0.38))',
+    coverImage: 'https://images.unsplash.com/photo-1582719478181-2cf4e3c2490c?auto=format&fit=crop&w=1400&q=80',
   },
   {
-    slug: 'sensorial-supply-chains',
-    title: 'Climate Retailers Map Sensorial Supply Chains',
+    slug: 'metaverse-logistics',
+    title: 'Metaverse Logistics Teams Are Shipping Real Goods',
     excerpt:
-      'Experiential stores are teaching buyers to taste, hear, and feel recycled content before it ever hits the shelves.',
+      'Immersive commerce crews are synchronizing haptics, robotics, and fulfillment so virtual purchases arrive faster than the stream.',
     content: [
-      'Retailers obsessed with circularity are finally getting better show-and-tell tools. We profile the sensorial labs inside three flagship stores that guide shoppers through the lifecycle of every garment.',
-      'By translating emission data into tactile samples and spatial audio, sustainability officers are seeing conversion lifts without resorting to greenwashing.',
-      'The piece ends with a blueprint for building your own sensorial chain walkthrough with off-the-shelf components.'
+      'Shopping inside immersive worlds is no longer a novelty. Logistics teams now mirror every virtual storefront with a robotics choreographer that packs and ships the item before you leave the scene.',
+      'We toured a “feelable warehouse” where digital twins sync with pick-and-place bots, while generative avatars verify identity without killing immersion.',
+      'The story includes the API playbook that lets indie developers plug their worlds into the fulfillment graph overnight.',
     ],
-    category: 'Climate & Culture',
-    readTime: '7 min read',
+    category: 'Commerce',
+    readTime: '4 min read',
     publishedAt: 'Last week',
-    mood: 'feature',
-    accent: '#ff8da1',
-    gradient: 'linear-gradient(145deg, rgba(255, 141, 161, 0.82), rgba(168, 139, 255, 0.55))',
-    coverImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80'
-  }
+    mood: 'quick',
+    accent: '#3ef6c0',
+    gradient: 'linear-gradient(150deg, rgba(10, 16, 24, 0.72), rgba(62, 246, 192, 0.4))',
+    coverImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1400&q=80',
+  },
+  {
+    slug: 'neural-rights-consortium',
+    title: 'Neural Rights Consortium Publishes a Civic Playbook',
+    excerpt:
+      'Cities want brain-computer interfaces, but only with consent infrastructure, transparency logs, and civic review boards.',
+    content: [
+      'Brain-computer interfaces are moving from clinics to consumer headsets. In response, a consortium of cities, ethicists, and startups crafted a playbook for neural rights rooted in informed consent.',
+      'The guide spells out how to build neural privacy boards, run breach drills, and visualize consent state in public dashboards so residents know when sensing is active.',
+      'We summarize the enforcement levers, the open-source firmware clauses, and how community groups are already customizing the template.',
+    ],
+    category: 'Society',
+    readTime: '5 min read',
+    publishedAt: 'Last week',
+    mood: 'quick',
+    accent: '#9ff25f',
+    gradient: 'linear-gradient(150deg, rgba(12, 20, 18, 0.72), rgba(159, 242, 95, 0.4))',
+    coverImage: 'https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1400&q=80',
+  },
 ];
 
 export function getPost(slug: string) {

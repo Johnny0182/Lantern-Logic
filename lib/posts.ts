@@ -86,6 +86,25 @@ export const posts: Post[] = [
     coverImage: 'https://images.unsplash.com/photo-1505842465776-3acb7d92c7f0?auto=format&fit=crop&w=1500&q=80',
   },
   {
+    slug: 'neon-mobility-grids',
+    title: 'Neon Mobility Grids Teach Transit to Self-Heal',
+    excerpt:
+      'City routes are training on live sensor twins so trains, ferries, and bikes orchestrate flow before gridlock hits.',
+    content: [
+      'Metropolitan transit labs are blending lidar-lined corridors, AI dispatch, and rider wearables into a single mobility twin.',
+      'Every train car, ferry slip, and bike dock streams telemetry into a shared choreography engine that can rebalance supply in real time.',
+      'The magic is a generative supervisor that simulates disruption thousands of times per minute. When a stadium empties or a storm cells in, the network quietly dispatches extra capacity, remixes routes, and signals riders through adaptive signage before congestion starts.',
+      'We unpack the gradient sensors lining subway tiles, the consent frameworks that keep riders in control, and the ledger that lets neighborhood councils audit every change.',
+    ],
+    category: 'Urban Tech',
+    readTime: '8 min read',
+    publishedAt: 'This week',
+    mood: 'feature',
+    accent: '#62788a',
+    gradient: 'linear-gradient(150deg, rgba(26, 32, 42, 0.58), rgba(142, 180, 176, 0.32))',
+    coverImage: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80',
+  },
+  {
     slug: 'martian-ops-console',
     title: 'Dispatch: Martian Ops Console Runs the Next Mission Control',
     excerpt:

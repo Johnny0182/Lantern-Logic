@@ -5,7 +5,7 @@ import styles from '@/styles/BlogIndex.module.css';
 import { posts } from '@/lib/posts';
 
 const heroPost = posts.find((post) => post.mood === 'hero');
-const featurePosts = posts.filter((post) => post.mood === 'feature');
+const featurePosts = posts.filter((post) => post.mood === 'feature').slice(0, 4);
 const allStories = posts
   .filter((post) => post.slug !== heroPost?.slug && post.mood !== 'feature')
   .slice(0, 10);
@@ -52,26 +52,38 @@ export default function BlogIndex() {
                 <p>Deep dives into frontier labs, cybersecurity shifts, and the builders changing how we live online.</p>
               </header>
               <div className={styles.featureMosaic}>
-                {featurePosts.map((post, index) => (
-                  <article
-                    key={post.slug}
-                    className={`${styles.featureCard} ${index === 0 ? styles.featureCardLarge : ''}`}
-                    style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
-                  >
-                    <div className={styles.featureInner}>
-                      <span className={styles.pill}>{post.category}</span>
-                      <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
-                        <h3>{post.title}</h3>
-                      </Link>
-                      <p>{post.excerpt}</p>
-                      <div className={styles.metaRow}>
-                        <span>{post.publishedAt}</span>
-                        <span aria-hidden="true">•</span>
-                        <span>{post.readTime}</span>
+                {featurePosts.map((post, index) => {
+                  const cardClasses = [styles.featureCard];
+
+                  if (index === 0) {
+                    cardClasses.push(styles.featureCardHero);
+                  }
+
+                  if (featurePosts.length > 3 && index === featurePosts.length - 1) {
+                    cardClasses.push(styles.featureCardWide);
+                  }
+
+                  return (
+                    <article
+                      key={post.slug}
+                      className={cardClasses.join(' ')}
+                      style={{ backgroundImage: `${post.gradient}, url(${post.coverImage})` }}
+                    >
+                      <div className={styles.featureInner}>
+                        <span className={styles.pill}>{post.category}</span>
+                        <Link href={`/blog/${post.slug}`} className={styles.featureLink}>
+                          <h3>{post.title}</h3>
+                        </Link>
+                        <p>{post.excerpt}</p>
+                        <div className={styles.metaRow}>
+                          <span>{post.publishedAt}</span>
+                          <span aria-hidden="true">•</span>
+                          <span>{post.readTime}</span>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                ))}
+                    </article>
+                  );
+                })}
               </div>
             </section>
           )}
